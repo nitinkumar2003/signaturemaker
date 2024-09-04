@@ -57,10 +57,6 @@ const SignatureCanvas = () => {
     };
 
 
-    const handleChange = () => {
-
-    }
-
     const downloadImage = () => {
         const canvas = canvasRef.current;
         const link = document.createElement('a');
@@ -69,11 +65,17 @@ const SignatureCanvas = () => {
         link.click();
     };
 
+
+
+    const redirectPortfolio=()=>{
+        window.open('https://reactviteportfolio.netlify.app/','_blank')
+    }
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
             <div className="flex justify-center mt-6 mb-2">
                     <a
-                        href='https://reactviteportfolio.netlify.app/'
+                        // href='https://reactviteportfolio.netlify.app/'
+                        onClick={redirectPortfolio}
                         className="portfolio-btn bg-blue-600 cursor-pointer text-white font-bold py-2 px-4 rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-blue-700">
                         Checkout my Portfolio
                     </a>
