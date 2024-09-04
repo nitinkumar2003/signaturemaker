@@ -71,6 +71,13 @@ const SignatureCanvas = () => {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+            <div className="flex justify-center mt-6 mb-2">
+                    <a
+                        href='https://reactviteportfolio.netlify.app/'
+                        className="portfolio-btn bg-blue-600 cursor-pointer text-white font-bold py-2 px-4 rounded-lg transform transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-blue-700">
+                        Checkout my Portfolio
+                    </a>
+                </div>
             <div className="bg-white rounded-lg shadow-lg p-5 w-96">
                 <h2 className="text-lg font-semibold mb-4">Create Signature</h2>
                 <ul className="flex border-b mb-5">
@@ -78,6 +85,7 @@ const SignatureCanvas = () => {
                         <button className="text-red-600 border-b-2 border-red-600 py-2 px-4">Draw</button>
                     </li>
                 </ul>
+             
                 <canvas
                     ref={canvasRef}
                     onMouseDown={startDrawing}
@@ -100,7 +108,7 @@ const SignatureCanvas = () => {
                             Signature Color
                         </div>
                     </div>
-                    <input id="penSize" type="range" min="1" max="20" value={lineWidth} onChange={(e) => setLineWidth(Number(e.target.value))} className="w-full transition-all duration-200 ease-in-out mt-1" />
+                    <input id="penSize" type="range" min="1" max="20" value={lineWidth} onChange={(e) => setLineWidth(Number(e.target.value))} className="w-full transition-all duration-200 ease-in-out mt-1 cursor-pointer" />
                 </div>
 
                 <div className="text-sm text-gray-600 mb-5">
